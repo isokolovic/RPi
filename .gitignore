@@ -1,9 +1,7 @@
 /build/*
 
-!*/
-
 !/*.cpp
 !/*.h
-!/CMakeLists.txt
+!CMakeLists.txt
 
 *.swp
