@@ -1,4 +1,8 @@
 /build/*
+/.vscode/*
+/.vs/*
+/bin/*
+/obj/*
 
 !/*.cpp
 !/*.h
