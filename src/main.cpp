@@ -9,19 +9,10 @@
 #include <vector>
 #include <string.h>
 
-//TODO Add git
-//TODO Convert to Cmake?
-//TODO split into .h and .cpp -> Ask AI how to split and to clean references 
-//TODO Free auto formatting addon for VS?
-//TODO RPI documentation regarding registers, addresses, etc. -> ask AI for sources
-
-//TODO Space war game -> Change icons / graphics -> Add Unit tests
-//TODO Improve hraphics -> add physics as in SpaceWar only in .NET?
-
 using namespace std;
 
 #define GPIO_BASE 0x3F200000 // GPIO Base Addr
-#define GPIO_LEN 0xB4 //GPIO memory length -> TODO Why this value?
+#define GPIO_LEN 0xB4 //GPIO memory length -> ?
 
 volatile unsigned* gpio;
 
@@ -40,7 +31,7 @@ int main()
     }
     else
     {
-        cout << "Unable to get host name. "<< endl;
+        cout << "Unable to get host name. " << endl;
     }
 
     get_user_in_group("raspberrypi", "gpio");
@@ -50,7 +41,7 @@ int main()
     // TODO Unit test
     *(gpio + 1) = (*(gpio + 1)) & ~(7 << 21) | (1 << 21); // Pin 17 as out
     cout << "Initial status: " << read_gpio(17) << endl;
-    
+
     *(gpio + 7) = 1 << 17; // Pin 17 as high
     cout << "Status after setting pin as high: " << read_gpio(17) << endl;
 
@@ -62,7 +53,7 @@ int main()
     return 0;
 }
 
-//TODO Convert to bool - better practice
+//TODO Convert to bool
 /// <summary>
 /// Make sure user is added to appropriate group which has sudo access to /dev/gpiomem
 /// </summary>

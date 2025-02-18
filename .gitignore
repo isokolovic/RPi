@@ -1,11 +1,4 @@
-/build/*
-/.vscode/*
-/.vs/*
-/bin/*
-/obj/*
-
-!/*.cpp
-!/*.h
-!CMakeLists.txt
-
-*.swp
+/build/
+/out/
+.vscode/
+/.vs/
